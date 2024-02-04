@@ -7,10 +7,10 @@ export const balanceSlice = createSlice({
   },
   reducers: {
     withdraw(state, action) {
-      state.balance -= 100;
+      state.balance -= action.payload;
     },
     deposit(state, action) {
-      state.balance += 100;
+      state.balance += action.payload;
     },
   },
 });
